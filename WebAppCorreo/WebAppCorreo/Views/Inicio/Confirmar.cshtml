@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Confirmar</title>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div class="container mt-3">
+        @if ((bool)ViewBag.Respuesta)
+        {
+            <div class="alert alert-success">
+                <p><b>Listo!</b>&nbsp; Su cuenta fue confirmada. Ahora puede acceder</p>
+                <a class="btn btn-success" href="@Url.Action("Login","Inicio")">Ingresar</a>
+            </div>
+        }
+        else
+        {
+            <div class="alert alert-danger">
+                <p>No se pudo confirmar el correo</p>
+            </div>
+        }
+    </div>
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+</html>

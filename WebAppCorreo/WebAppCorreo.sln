@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppCorreo", "WebAppCorreo\WebAppCorreo.csproj", "{758EE8FB-503A-4F60-AC2F-BF86ADDB679E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{758EE8FB-503A-4F60-AC2F-BF86ADDB679E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{758EE8FB-503A-4F60-AC2F-BF86ADDB679E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{758EE8FB-503A-4F60-AC2F-BF86ADDB679E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{758EE8FB-503A-4F60-AC2F-BF86ADDB679E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BC5BEAE9-F7B4-45F0-9219-D5663E41FBDB}
+	EndGlobalSection
+EndGlobal

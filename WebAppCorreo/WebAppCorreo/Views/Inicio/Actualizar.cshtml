@@ -1,0 +1,67 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Actualizar</title>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div class="row justify-content-center mt-5">
+
+        <div class="col-5">
+
+            <div class="card">
+                <div class="card-header"><h3 class="text-center">Restablecer Contraseña</h3></div>
+                <div class="card-body">
+                    @if (ViewBag.Restablecido == null)
+                    {
+                        <form action="@Url.Action("Actualizar","Inicio")" method="post">
+                            <input type="hidden" name="token" value="@ViewBag.Token" />
+
+                            <div class="mb-3">
+                                <label>Ingresar una nueva contraseña</label>
+                                <input type="password" class="form-control" name="clave" required />
+                            </div>
+                            <div class="mb-3">
+                                <label>Confirmar contraseña</label>
+                                <input type="password" class="form-control" name="confirmarClave" required />
+                            </div>
+
+                            @if (ViewBag.Mensaje != null)
+                            {
+                                <div class="alert alert-danger">
+                                    @ViewBag.Mensaje
+                                </div>
+                            }
+
+                            <div class="mb-3">
+                                <div class="d-grid">
+                                    <button class="btn btn-primary" type="submit">Combiar contraseña</button>
+                                </div>
+                            </div>
+
+
+                        </form>
+                    }
+                    else
+                    {
+                        <div class="alert alert-success">
+                            <p>Su contraseña fue restablecida, ahora puede ingresar a su cuenta con su nueva clave.</p>
+                            <a class="btn btn-success" href="@Url.Action("Login","Inicio")">Ingresar</a>
+                        </div>
+                    }
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+</html>
